@@ -2,12 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.AppPlantery" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/green</item>
-        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/dark_blue</item>
-        <item name="colorSecondaryVariant">@color/dark_blue</item>
+        <item name="colorSecondary">@color/blue_dark</item>
+        <item name="colorSecondaryVariant">@color/blue_dark</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
