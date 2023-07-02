@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">appPlantery</string>
+    <string name="titleName">Plantery</string>
+    <string name="email">Phone number, username, or email</string>
+    <string name="password">Password</string>
+    <string name="enter">Log in</string>
+    <string name="or">Or</string>
+    <string name="does_not_have_acoount">Don\'t have an account? <b><font color="#182C2B">Sign up</font></b></string>
 </resources>
