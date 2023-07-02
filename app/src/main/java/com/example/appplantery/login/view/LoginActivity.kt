@@ -2,6 +2,8 @@ package com.example.appplantery.login.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.WindowManager
 import androidx.appcompat.widget.AppCompatButton
 import com.example.appplantery.R
@@ -19,12 +21,35 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val editTextEmail = findViewById<TextInputEditText>(R.id.login_edit_email)
-        val editTextPassword = findViewById<TextInputEditText>(R.id.login_edit_password)
-        findViewById<AppCompatButton>(R.id.login_btn_enter).isEnabled =
-            editTextPassword.text?.isEmpty() ?: false
+        val editTextEmail = binding.loginEditEmail
+        val editTextPassword = binding.loginEditPassword
 
-        findViewById<TextInputLayout>(R.id.login_edit_email_input)
+        editTextEmail.addTextChangedListener(watcher)
+        editTextPassword.addTextChangedListener(watcher)
+
+        binding.loginBtnEnter.setOnClickListener{
+            binding.loginEditEmailInput
                 .error = "Sorry, your email was incorrect."
+
+            binding.loginEditPasswordInput
+                .error = "Sorry, your password was incorrect."
+        }
+
     }
+
+    private val watcher = object : TextWatcher {
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+        }
+
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            binding.loginBtnEnter.isEnabled = s.toString().isNotEmpty()
+        }
+
+        override fun afterTextChanged(s: Editable?) {
+
+        }
+
+    }
+
 }
