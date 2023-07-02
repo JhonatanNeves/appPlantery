@@ -5,11 +5,12 @@
 
     <color name="gray_border">#DBDBDB</color>
     <color name="green_primary">#557F67</color>
+    <color name="green_darker">#3C5948</color>
     <color name="orange_dull">#F1CBB6</color>
     <color name="gray_light">#FCF7F4</color>
     <color name="beige_light">#F8ECE0</color>
     <color name="gray_suit">#E5E6E0</color>
     <color name="brown_earth">#C7BAA9</color>
-    <color name="blue_dark">#182C2B</color>
+    <color name="blue_darker">#182C2B</color>
     <color name="green_disabled">#66997C</color>
 </resources>

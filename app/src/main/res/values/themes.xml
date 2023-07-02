@@ -3,13 +3,13 @@
     <style name="Theme.AppPlantery" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/green_primary</item>
-        <item name="colorPrimaryVariant">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_darker</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue_dark</item>
-        <item name="colorSecondaryVariant">@color/blue_dark</item>
+        <item name="colorSecondary">@color/blue_darker</item>
+        <item name="colorSecondaryVariant">@color/blue_darker</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorSecondary</item>
     </style>
 </resources>
