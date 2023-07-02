@@ -2,7 +2,7 @@
 Ongoing
 
 <div aling="light">
-<img aling="right" alt="Splash Screen" src="./tpl_1.png" width="280px"/> 
+<img aling="right" alt="Splash Screen" src="./tp_1.png" width="280px"/> 
 </div>
 
 ## 📜 License
