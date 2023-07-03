@@ -9,6 +9,7 @@ Plantery will remind you to maintain and help you adjust your hydroponic conditi
 
 ## TECHNOLOGIES USED
 -ONGOING
+- Fragment
 
 <div aling="light">
 <img aling="right" alt="Splash Screen" src="./tp_1.png" width="280px"/> 
