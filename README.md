@@ -8,7 +8,7 @@ Plantery will remind you to maintain and help you adjust your hydroponic conditi
 - and more
 
 ## TECHNOLOGIES USED
--ONGOING
+- ONGOING
 - Fragment
 
 <div aling="light">
