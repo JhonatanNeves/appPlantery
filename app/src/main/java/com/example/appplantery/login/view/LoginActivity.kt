@@ -2,15 +2,11 @@ package com.example.appplantery.login.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.WindowManager
-import androidx.appcompat.widget.AppCompatButton
-import com.example.appplantery.R
 import com.example.appplantery.databinding.ActivityLoginBinding
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
-import java.net.BindException
 
 class LoginActivity : AppCompatActivity() {
 
@@ -27,12 +23,18 @@ class LoginActivity : AppCompatActivity() {
         editTextEmail.addTextChangedListener(watcher)
         editTextPassword.addTextChangedListener(watcher)
 
-        binding.loginBtnEnter.setOnClickListener{
+        val buttonEnter = binding.loginBtnEnter
+        buttonEnter.setOnClickListener{
+                buttonEnter.showProgress(true)
             binding.loginEditEmailInput
-                .error = "Sorry, your email was incorrect."
+                .error = "Sorry, your email was incorrect"
 
             binding.loginEditPasswordInput
-                .error = "Sorry, your password was incorrect."
+                .error = "Sorry, your password was incorrect"
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                buttonEnter.showProgress(false)
+            }, 2000)
         }
 
     }
