@@ -5,7 +5,8 @@
     <item android:id="@android:id/background">
         <shape>
             <solid android:color="@color/button_background" />
-            <corners android:radius="300dp" />
+            <corners android:radius="30dp" />
+            <padding android:bottom="30dp"/>
         </shape>
     </item>
 

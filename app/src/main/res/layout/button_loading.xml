@@ -7,6 +7,7 @@
     <Button style="@style/Theme.AppPlantery.Button" />
 
     <ProgressBar
+        android:id="@+id/btn_progressbar"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center_horizontal"

@@ -4,13 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.WindowManager
-import androidx.appcompat.widget.AppCompatButton
-import com.example.appplantery.R
 import com.example.appplantery.databinding.ActivityLoginBinding
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
-import java.net.BindException
 
 class LoginActivity : AppCompatActivity() {
 
@@ -27,8 +21,11 @@ class LoginActivity : AppCompatActivity() {
         editTextEmail.addTextChangedListener(watcher)
         editTextPassword.addTextChangedListener(watcher)
 
-        binding.loginBtnEnter.setOnClickListener{
-            binding.loginEditEmailInput
+        val buttonEnter = binding.loginBtnEnter
+        buttonEnter.setOnClickListener{
+                buttonEnter.showProgress(true)
+
+                binding.loginEditEmail
                 .error = "Sorry, your email was incorrect."
 
             binding.loginEditPasswordInput

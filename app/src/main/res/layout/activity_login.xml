@@ -62,11 +62,11 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.example.appplantery.login.view.LoadingButton
                 android:id="@+id/login_btn_enter"
-                style="@style/Theme.AppPlantery.Button"
-                android:enabled="false"
-                android:text="@string/enter" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/enter" />
 
             <FrameLayout
                 style="@style/Theme.AppPlantery.FormContainder"
