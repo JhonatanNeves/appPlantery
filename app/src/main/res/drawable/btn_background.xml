@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="?android:colorControlActivated">
+    android:color="@color/green_primary">
 
     <item android:id="@android:id/background">
         <shape>
-            <solid android:color="@color/button_background" />
+            <solid android:color="@color/green_primary"/>
             <corners android:radius="30dp" />
-            <padding android:bottom="30dp"/>
+            <padding android:padding="30dp"/>
         </shape>
     </item>
 
