@@ -10,9 +10,9 @@
     <fragment
         android:id="@+id/register_fragment"
         android:layout_width="match_parent"
-        android:name="com.example.appplantery.register.view.RegisterEmailFragmant"
+        android:name="com.example.appplantery.register.view.RegisterPhotoFragment"
         android:layout_height="match_parent"
-        tools:layout="@layout/fragment_register_email"
+        tools:layout="@layout/fragment_register_photo"
         />
 
 </LinearLayout>
