@@ -36,8 +36,8 @@
 
             <TextView
                 style="@style/Theme.AppPlantery.TextViewBaseBlueDarker"
-                android:layout_marginBottom="18dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="18dp"
                 android:text="@string/photo_register_subtitle"
                 android:textSize="18sp" />
 
@@ -45,7 +45,12 @@
                 android:id="@+id/register_btn_next"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/next" />
+                app:text="@string/add_photo" />
+
+            <Button
+                android:id="@+id/register_btn_jump"
+                style="@style/Theme.AppPlantery.Link"
+                android:text="@string/jump" />
 
         </LinearLayout>
 

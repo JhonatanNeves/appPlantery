@@ -19,9 +19,9 @@
     <string name="photo_register_title">Upload profile picture</string>
     <string name="take_picture">Tirar foto</string>
     <string name="search_gallery">Escolher na Biblioteca</string>
-    <string name="define_photo_profile">Definir uma foto do perfil</string>
-    <string name="jump">Pular</string>
-    <string name="add_photo">Adicionar uma foto</string>
+    <string name="define_photo_profile">Set a profile picture</string>
+    <string name="jump"><b>Jump</b></string>
+    <string name="add_photo">Upload a photo</string>
     <string name="home">Home</string>
     <string name="posts">publicações</string>
     <string name="followers">seguidores</string>
@@ -32,8 +32,8 @@
     <string name="password_not_equal">Senha e confirmar senha devem ser iguais.</string>
     <string name="save">Salvar</string>
     <string name="title_activity_add">AddActivity</string>
-    <string name="photo">Foto</string>
-    <string name="gallery">Galeria</string>
+    <string name="photo">Photo</string>
+    <string name="gallery">Gallery</string>
     <string name="write_caption">Escreva uma descrição…</string>
     <string name="share">compartilhar</string>
     <string name="go">Avançar</string>
