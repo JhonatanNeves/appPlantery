@@ -62,15 +62,6 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-<!--            <include-->
-<!--                android:id="@+id/myProgressButton"-->
-<!--                layout="@layout/progress_btn_layout"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent" />-->
-
             <com.example.appplantery.login.view.LoadingButton
                 android:id="@+id/login_btn_enter"
                 android:layout_width="match_parent"
