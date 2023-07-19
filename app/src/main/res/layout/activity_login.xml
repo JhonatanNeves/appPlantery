@@ -52,7 +52,8 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/login_edit_password_input"
                 style="@style/Theme.AppPlantery.FormEditTextInput"
-                app:hintEnabled="false">
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/login_edit_password"
