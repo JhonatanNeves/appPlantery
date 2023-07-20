@@ -43,4 +43,7 @@
     <string name="logout">Deseja sair?</string>
     <string name="logout_action">Sair</string>
     <string name="cancel">Cancel</string>
+    <string name="calendar">Calendar</string>
+    <string name="myplants">My Plants</string>
+    <string name="profile">Profile</string>
 </resources>
