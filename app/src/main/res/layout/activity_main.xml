@@ -4,25 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.view.MainActivity"
-    >
+    android:background="@color/beige_light"
+    tools:context=".main.view.MainActivity">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        tools:layout="@layout/fragment_profile"
+        app:layout_constraintBottom_toTopOf="@id/main_bottom_nav"
+        app:layout_constraintTop_toTopOf="parent"
+        android:name="com.example.appplantery.profile.view.FragmentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
         android:id="@+id/main_bottom_nav"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:itemIconTint="@color/green_primary"
-        app:menu="@menu/menu_button_nav"
-        app:itemIconSize="28dp"
-        app:itemTextColor="@color/green_primary"
-        app:labelVisibilityMode="labeled"
-        app:itemRippleColor="@null"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_menu_nav_view"
-        />
+        app:itemIconSize="28dp"
+        app:itemIconTint="@color/green_primary"
+        app:itemRippleColor="@null"
+        app:itemTextColor="@color/green_primary"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_button_nav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--    app:labelVisibilityMode="unlabeled"-->
+    <!--    app:labelVisibilityMode="unlabeled"-->
