@@ -57,7 +57,7 @@
     <style name="Theme.AppPlantery.Link" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/green_primary</item>
+        <item name="android:textColor">@color/blue_darker</item>
 
     </style>
 
