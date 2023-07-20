@@ -21,13 +21,16 @@
             android:orientation="vertical"
             android:paddingBottom="70dp">
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="122dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img_icon"
+                android:src="@drawable/ic_insta_profile_thin"
+                app:civ_circle_background_color="@color/green_darker"
+                app:civ_border_color="@color/green_darker"
+                app:civ_border_width="1dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="80dp"
-                android:contentDescription="@null"
-                android:src="@drawable/user" />
+                android:layout_marginBottom="30dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"/>
 
             <TextView
                 style="@style/Theme.AppPlantery.TextViewBaseBlueDarker"
