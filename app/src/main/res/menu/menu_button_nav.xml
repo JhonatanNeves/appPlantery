@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_bottom_home"
+        android:icon="@drawable/ic_home96"
+        android:title="@string/home"/>
+
+    <item android:id="@+id/menu_bottom_calendar"
+        android:icon="@drawable/ic_calendar96"
+        android:title="@string/calendar"/>
+
+    <item android:id="@+id/menu_bottom_myplants"
+        android:icon="@drawable/ic_bag96"
+        android:title="@string/myplants"/>
+
+    <item android:id="@+id/menu_bottom_profile"
+        android:icon="@drawable/ic_user96"
+        android:title="@string/profile"/>
+
+</menu>
