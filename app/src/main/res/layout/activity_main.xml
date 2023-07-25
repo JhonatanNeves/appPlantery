@@ -7,6 +7,16 @@
     android:background="@color/beige_light"
     tools:context=".main.view.MainActivity">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="2dp"
+        />
+
     <fragment
         android:id="@+id/main_fragment"
         tools:layout="@layout/fragment_profile"
