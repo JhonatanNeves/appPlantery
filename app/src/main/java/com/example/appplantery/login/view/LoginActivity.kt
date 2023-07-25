@@ -27,10 +27,10 @@ class LoginActivity : AppCompatActivity() {
         buttonEnter.setOnClickListener{
                 buttonEnter.showProgress(true)
             binding.loginEditEmailInput
-                .error = "Sorry, your email was incorrect"
+                .error = "The email address or password is incorrect. Please try again."
 
             binding.loginEditPasswordInput
-                .error = "Sorry, your password was incorrect"
+                .error = "The email address or password is incorrect. Please try again."
 
             Handler(Looper.getMainLooper()).postDelayed({
                 buttonEnter.showProgress(false)
@@ -51,7 +51,5 @@ class LoginActivity : AppCompatActivity() {
         override fun afterTextChanged(s: Editable?) {
 
         }
-
     }
-
 }
