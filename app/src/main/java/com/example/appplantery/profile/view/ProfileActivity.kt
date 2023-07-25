@@ -1,16 +1,15 @@
-package com.example.appplantery.main.view
+package com.example.appplantery.profile.view
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import com.example.appplantery.R
 
-class MainActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_profile)
 
         val toolbar: Toolbar = findViewById(R.id.activity_toolbar)
         setSupportActionBar(toolbar)
