@@ -46,4 +46,5 @@
     <string name="calendar">Calendar</string>
     <string name="myplants">My Plants</string>
     <string name="profile">Profile</string>
+    <string name="profile_title">Profile</string>
 </resources>
