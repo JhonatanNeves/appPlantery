@@ -10,6 +10,6 @@
         <item name="colorSecondaryVariant">@color/blue_darker</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/beige_light</item>
+        <item name="android:statusBarColor">@color/orange_dull</item>
     </style>
 </resources>
