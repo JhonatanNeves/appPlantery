@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_profile_account"
+        android:icon="@drawable/ic_home96"
+        android:title="@string/account"/>
+
+    <item android:id="@+id/menu_bottom_notification"
+        android:icon="@drawable/ic_calendar96"
+        android:title="@string/notification"
+        />
+
+    <item android:id="@+id/menu_bottom_settings"
+        android:icon="@drawable/ic_bag96"
+        android:title="@string/settings"/>
+
+    <item android:id="@+id/menu_bottom_help"
+        android:icon="@drawable/ic_user96"
+        android:title="@string/help"/>
+
+</menu>

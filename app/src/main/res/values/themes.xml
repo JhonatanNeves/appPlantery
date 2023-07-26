@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.AppPlantery" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
+        <item name="fontFamily">@font/montaga</item>
         <item name="colorPrimary">@color/green_primary</item>
         <item name="colorPrimaryVariant">@color/green_darker</item>
         <item name="colorOnPrimary">@color/white</item>
