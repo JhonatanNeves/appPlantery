@@ -58,7 +58,12 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/blue_darker</item>
+    </style>
 
+    <style name="Theme.AppPlantery.TextViewProfile">
+        <item name="android:textColor">@color/blue_darker</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 </resources>
