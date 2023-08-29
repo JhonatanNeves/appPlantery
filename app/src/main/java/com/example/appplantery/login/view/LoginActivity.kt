@@ -23,31 +23,33 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.insetsController?.setSystemBarsAppearance(WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
-            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS)
+        window.insetsController?.setSystemBarsAppearance(
+            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+        )
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.beige_light)
 
-        val editTextEmail = binding.loginEditEmail
-        val editTextPassword = binding.loginEditPassword
+        with(binding) {
 
-        editTextEmail.addTextChangedListener(watcher)
-        editTextPassword.addTextChangedListener(watcher)
+            loginEditEmail.addTextChangedListener(watcher)
+            loginEditPassword.addTextChangedListener(watcher)
 
-        val buttonEnter = binding.loginBtnEnter
-        buttonEnter.setOnClickListener{
-                buttonEnter.showProgress(true)
-            binding.loginEditEmailInput
-                .error = "The email address or password is incorrect. Please try again."
+            loginBtnEnter.setOnClickListener {
+                loginBtnEnter.showProgress(true)
 
-            binding.loginEditPasswordInput
-                .error = "The email address or password is incorrect. Please try again."
+                loginEditEmailInput
+                    .error = "The email address or password is incorrect. Please try again."
 
-            Handler(Looper.getMainLooper()).postDelayed({
-                buttonEnter.showProgress(false)
-            }, 2000)
+                loginEditPasswordInput
+                    .error = "The email address or password is incorrect. Please try again."
+
+                Handler(Looper.getMainLooper()).postDelayed({
+                    loginBtnEnter.showProgress(false)
+                }, 2000)
+            }
+
         }
-
     }
 
     private val watcher = object : TextWatcher {
