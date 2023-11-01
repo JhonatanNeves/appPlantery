@@ -18,7 +18,7 @@ class RegisterActivity : AppCompatActivity() {
             WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
             WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS)
 
-        window.statusBarColor = ContextCompat.getColor(this, R.color.orange_dull)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.beige_light)
 
     }
 }
