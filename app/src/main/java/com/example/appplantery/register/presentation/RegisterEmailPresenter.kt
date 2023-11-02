@@ -1,4 +1,4 @@
-package com.example.appplantery.login.presentation
+package com.example.appplantery.register.presentation
 
 import android.util.Patterns
 import com.example.appplantery.R
@@ -6,15 +6,16 @@ import com.example.appplantery.common.model.UserAuth
 import com.example.appplantery.login.Login
 import com.example.appplantery.login.data.LoginCallback
 import com.example.appplantery.login.data.LoginRepository
+import com.example.appplantery.register.RegisterEmail
+import com.example.appplantery.register.data.RegisterEmailCallback
+import com.example.appplantery.register.data.RegisterEmailRepository
 
-class LoginPresenter(
-    private var view: Login.View?,
-    private val repository: LoginRepository
-) : Login.Presenter {
-
-    override fun login(email: String, password: String) {
+class RegisterEmailPresenter(
+    private var view: RegisterEmail.View?,
+    private val repository: RegisterEmailRepository
+) : RegisterEmail.Presenter {
+    override fun create(email: String) {
         val isEmailValid = Patterns.EMAIL_ADDRESS.matcher(email).matches()
-        val isPasswordValid = password.length >= 8
 
         if (!isEmailValid) {
             view?.displayEmailFailure(R.string.invalid_email)
@@ -22,22 +23,16 @@ class LoginPresenter(
             view?.displayEmailFailure(null)
         }
 
-        if (!isPasswordValid) {
-            view?.displayPasswordFailure(R.string.invalid_password)
-        } else {
-            view?.displayPasswordFailure(null)
-        }
-
-        if (isEmailValid && isPasswordValid) {
+        if (isEmailValid) {
             view?.showProgress(true)
 
-            repository.login(email, password, object : LoginCallback {
-                override fun onSuccess(userAuth: UserAuth) {
-                    view?.onUserAuthenticated()
+            repository.create(email, object : RegisterEmailCallback {
+                override fun onSuccess() {
+                    view?.goToNameAndPasswordScreen(email)
                 }
 
                 override fun onFailure(message: String) {
-                    view?.onUserUnauthorized(message)
+                    view?.onEmailFailure(message)
                 }
 
                 override fun onComplete() {

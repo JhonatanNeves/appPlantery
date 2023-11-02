@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.appplantery.R
+import com.example.appplantery.common.base.DependencyInjector
 import com.example.appplantery.common.util.TxtWatcher
 import com.example.appplantery.databinding.ActivityLoginBinding
 import com.example.appplantery.home.view.HomeActivity
@@ -23,6 +24,7 @@ import com.example.appplantery.login.data.FakeDataSource
 import com.example.appplantery.login.data.LoginRepository
 import com.example.appplantery.login.presentation.LoginPresenter
 import com.example.appplantery.profile.view.ProfileActivity
+import com.example.appplantery.register.view.RegisterActivity
 
 class LoginActivity : AppCompatActivity(), Login.View {
 
@@ -36,8 +38,7 @@ class LoginActivity : AppCompatActivity(), Login.View {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val repository = LoginRepository(FakeDataSource())
-        presenter = LoginPresenter(this, repository)
+        presenter = LoginPresenter(this, DependencyInjector.loginRepository())
 
         window.insetsController?.setSystemBarsAppearance(
             WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
@@ -60,6 +61,10 @@ class LoginActivity : AppCompatActivity(), Login.View {
                 presenter.login(loginEditEmail.text.toString(), loginEditPassword.text.toString())
 
             }
+
+            loginTxtRegister.setOnClickListener {
+                goToRegisterScreen()
+            }
         }
     }
 
@@ -71,6 +76,10 @@ class LoginActivity : AppCompatActivity(), Login.View {
     private val watcher = TxtWatcher {
         binding.loginBtnEnter.isEnabled = binding.loginEditEmail.text.toString().isNotEmpty()
                 && binding.loginEditPassword.text.toString().isNotEmpty()
+    }
+
+    private fun goToRegisterScreen(){
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 
     override fun showProgress(enabled: Boolean) {
