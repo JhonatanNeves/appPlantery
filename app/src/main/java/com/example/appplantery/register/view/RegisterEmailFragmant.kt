@@ -1,5 +1,6 @@
 package com.example.appplantery.register.view
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import com.example.appplantery.register.presentation.RegisterEmailPresenter
 class RegisterEmailFragmant : Fragment(R.layout.fragment_register_email), RegisterEmail.View {
 
     private var binding : FragmentRegisterEmailBinding? = null
+    private var fragmentAttachListener: FragmentAttachListener? = null
 
     override lateinit var presenter: RegisterEmail.Presenter
 
@@ -47,8 +49,16 @@ class RegisterEmailFragmant : Fragment(R.layout.fragment_register_email), Regist
 
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is FragmentAttachListener){
+            fragmentAttachListener = context
+        }
+    }
+
     override fun onDestroy() {
         binding = null
+        fragmentAttachListener = null
         presenter.onDestroy()
         super.onDestroy()
     }
@@ -70,5 +80,6 @@ class RegisterEmailFragmant : Fragment(R.layout.fragment_register_email), Regist
     }
 
     override fun goToNameAndPasswordScreen(email: String) {
+        fragmentAttachListener?.goToNameAndPassWordSceen(email)
     }
 }
