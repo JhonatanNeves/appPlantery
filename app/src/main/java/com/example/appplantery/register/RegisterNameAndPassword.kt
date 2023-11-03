@@ -4,20 +4,22 @@ import androidx.annotation.StringRes
 import com.example.appplantery.common.base.BasePresenter
 import com.example.appplantery.common.base.BaseView
 
-interface RegisterEmail {
+interface RegisterNameAndPassword {
 
     interface Presenter : BasePresenter {
-        fun create(email: String)
+        fun create(email: String, name: String, password: String, confirm: String)
     }
 
     interface View : BaseView<Presenter> {
         fun showProgress(enable: Boolean)
 
-        fun displayEmailFailure(@StringRes emailError: Int?)
+        fun displayNameFailure(@StringRes nameError: Int?)
 
-        fun onEmailFailure(message: String)
+        fun displayPasswordFailure(@StringRes passError: Int?)
 
-        fun goToNameAndPasswordScreen(email: String)
+        fun onCreateFailure(message: String)
+
+        fun onCreateSuccess(name: String)
     }
 
 }

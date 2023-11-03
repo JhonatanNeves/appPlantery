@@ -2,17 +2,13 @@ package com.example.appplantery.register.presentation
 
 import android.util.Patterns
 import com.example.appplantery.R
-import com.example.appplantery.common.model.UserAuth
-import com.example.appplantery.login.Login
-import com.example.appplantery.login.data.LoginCallback
-import com.example.appplantery.login.data.LoginRepository
 import com.example.appplantery.register.RegisterEmail
-import com.example.appplantery.register.data.RegisterEmailCallback
-import com.example.appplantery.register.data.RegisterEmailRepository
+import com.example.appplantery.register.data.RegisterCallback
+import com.example.appplantery.register.data.RegisterRepository
 
 class RegisterEmailPresenter(
     private var view: RegisterEmail.View?,
-    private val repository: RegisterEmailRepository
+    private val repository: RegisterRepository
 ) : RegisterEmail.Presenter {
     override fun create(email: String) {
         val isEmailValid = Patterns.EMAIL_ADDRESS.matcher(email).matches()
@@ -26,7 +22,7 @@ class RegisterEmailPresenter(
         if (isEmailValid) {
             view?.showProgress(true)
 
-            repository.create(email, object : RegisterEmailCallback {
+            repository.create(email, object : RegisterCallback {
                 override fun onSuccess() {
                     view?.goToNameAndPasswordScreen(email)
                 }
