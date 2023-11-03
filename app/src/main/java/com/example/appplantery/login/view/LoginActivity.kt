@@ -45,8 +45,8 @@ class LoginActivity : AppCompatActivity(), Login.View {
             WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
         )
         window.statusBarColor = ContextCompat.getColor(this, R.color.beige_light)
-        with(binding) {
 
+        with(binding) {
             loginEditEmail.addTextChangedListener(watcher)
             loginEditEmail.addTextChangedListener(TxtWatcher {
                 displayEmailFailure(null)
