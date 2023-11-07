@@ -1,5 +1,6 @@
 package com.example.appplantery.register.view
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.appplantery.R
 import com.example.appplantery.databinding.ActivityRegisterBinding
+import com.example.appplantery.home.view.HomeActivity
+import com.example.appplantery.profile.view.ProfileActivity
 import com.example.appplantery.register.view.RegisterNamePasswordFragment.Companion.KEY_EMAIL
 import com.example.appplantery.register.view.RegisterWelcomeFragment.Companion.KEY_NAME
 
@@ -55,6 +58,12 @@ class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
     override fun goToPhotoScreen() {
         val fragment = RegisterPhotoFragment()
         replaceFragment(fragment)
+    }
+
+    override fun goToHomeScreen() {
+        val intent = Intent(this, HomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 
     private fun replaceFragment(fragment: Fragment) {
