@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.appplantery.R
 import com.example.appplantery.databinding.ActivityRegisterBinding
 import com.example.appplantery.register.view.RegisterNamePasswordFragment.Companion.KEY_EMAIL
+import com.example.appplantery.register.view.RegisterWelcomeFragment.Companion.KEY_NAME
 
 class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
 
@@ -33,12 +34,26 @@ class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
         replaceFragment(fragment)
     }
 
-    override fun goToNameAndPassWordSceen(email: String) {
+    override fun goToNameAndPassWordScreen(email: String) {
         val fragment = RegisterNamePasswordFragment().apply {
             arguments = Bundle().apply {
                 putString(KEY_EMAIL, email)
             }
         }
+        replaceFragment(fragment)
+    }
+
+    override fun goToWelcomeScreen(name: String) {
+        val fragment = RegisterWelcomeFragment().apply {
+            arguments = Bundle().apply {
+                putString(KEY_NAME, name)
+            }
+        }
+        replaceFragment(fragment)
+    }
+
+    override fun goToPhotoScreen() {
+        val fragment = RegisterPhotoFragment()
         replaceFragment(fragment)
     }
 

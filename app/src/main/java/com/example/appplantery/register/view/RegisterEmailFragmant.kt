@@ -79,7 +79,7 @@ class RegisterEmailFragmant : Fragment(R.layout.fragment_register_email), Regist
         binding?.registerEditEmailInput?.error = message
     }
 
-    override fun goToNameAndPasswordScreen(email: String) {
-        fragmentAttachListener?.goToNameAndPassWordSceen(email)
+    override fun goToNameAndPassWordScreen(email: String) {
+        fragmentAttachListener?.goToNameAndPassWordScreen(email)
     }
 }

@@ -33,7 +33,7 @@ android:background="@color/beige_light">
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="48dp"
-            android:text="@string/titleName"
+            android:text="TELA HOME"
             android:textColor="@color/green_primary"
             android:textSize="25sp" />
 
@@ -46,14 +46,20 @@ android:background="@color/beige_light">
     </LinearLayout>
 </ScrollView>
 
-<View
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:background="@color/green_primary"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/scrowview"
-     />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_menu_nav_view"
+        app:itemIconSize="28dp"
+        app:itemIconTint="@color/green_primary"
+        app:itemRippleColor="@null"
+        app:itemTextColor="@color/green_primary"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_button_nav" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

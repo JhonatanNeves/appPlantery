@@ -24,7 +24,7 @@ class RegisterEmailPresenter(
 
             repository.create(email, object : RegisterCallback {
                 override fun onSuccess() {
-                    view?.goToNameAndPasswordScreen(email)
+                    view?.goToNameAndPassWordScreen(email)
                 }
 
                 override fun onFailure(message: String) {
