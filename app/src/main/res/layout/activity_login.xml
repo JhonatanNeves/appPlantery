@@ -63,7 +63,7 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.example.appplantery.login.view.LoadingButton
+            <com.example.appplantery.common.view.LoadingButton
                 android:id="@+id/login_btn_enter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

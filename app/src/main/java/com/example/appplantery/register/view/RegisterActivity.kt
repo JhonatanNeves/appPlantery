@@ -1,14 +1,18 @@
 package com.example.appplantery.register.view
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsetsController
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.appplantery.R
+import com.example.appplantery.common.view.CropperImageFragment
+import com.example.appplantery.common.view.CropperImageFragment.Companion.KEY_URI
 import com.example.appplantery.databinding.ActivityRegisterBinding
 import com.example.appplantery.home.view.HomeActivity
 import com.example.appplantery.profile.view.ProfileActivity
@@ -64,6 +68,19 @@ class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
         val intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
+    }
+
+    private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+        val fragment = CropperImageFragment().apply {
+            arguments = Bundle().apply {
+                putParcelable(KEY_URI, uri)
+            }
+        }
+        replaceFragment(fragment)
+    }
+
+    override fun goToGalleryScreen() {
+        getContent.launch("image/*")
     }
 
     private fun replaceFragment(fragment: Fragment) {
