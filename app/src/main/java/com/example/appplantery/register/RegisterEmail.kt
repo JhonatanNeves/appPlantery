@@ -17,7 +17,7 @@ interface RegisterEmail {
 
         fun onEmailFailure(message: String)
 
-        fun goToNameAndPasswordScreen(email: String)
+        fun goToNameAndPassWordScreen(email: String)
     }
 
 }

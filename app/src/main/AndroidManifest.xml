@@ -13,6 +13,13 @@
         android:theme="@style/Theme.AppPlantery"
         tools:targetApi="31">
         <activity
+            android:name=".main.view.MainActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".home.view.HomeActivity"
             android:exported="true">
             <meta-data
@@ -32,7 +39,6 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
         <activity
             android:name=".login.view.LoginActivity"
@@ -42,7 +48,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
