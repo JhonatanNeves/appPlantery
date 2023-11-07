@@ -31,7 +31,7 @@
     <string name="invalid_email">Invalid email</string>
     <string name="invalid_password">The password must not be at least 8 characters long</string>
     <string name="password_not_equal">The password and password confirmation must be the same</string>
-    <string name="save">Salvar</string>
+    <string name="save">Save</string>
     <string name="title_activity_add">AddActivity</string>
     <string name="photo">Photo</string>
     <string name="gallery">Gallery</string>

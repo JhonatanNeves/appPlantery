@@ -1,4 +1,4 @@
-package com.example.appplantery.login.view
+package com.example.appplantery.common.view
 
 import android.content.Context
 import android.util.AttributeSet

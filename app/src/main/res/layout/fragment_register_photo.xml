@@ -22,7 +22,7 @@
             android:paddingBottom="70dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_img_icon"
+                android:id="@+id/register_img_profile"
                 android:src="@drawable/ic_insta_profile_thin"
                 app:civ_circle_background_color="@color/green_darker"
                 app:civ_border_color="@color/white"
@@ -45,7 +45,7 @@
                 android:text="@string/photo_register_subtitle"
                 android:textSize="18sp" />
 
-            <com.example.appplantery.login.view.LoadingButton
+            <com.example.appplantery.common.view.LoadingButton
                 android:id="@+id/register_btn_next"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
