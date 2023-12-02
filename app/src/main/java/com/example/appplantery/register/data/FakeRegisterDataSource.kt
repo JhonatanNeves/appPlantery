@@ -48,6 +48,7 @@ class FakeRegisterDataSource : RegisterDataSource {
         }, 2000)
     }
 
+
     override fun updateUser(photoUri: Uri, callback: RegisterCallback) {
         Handler(Looper.getMainLooper()).postDelayed({
 
