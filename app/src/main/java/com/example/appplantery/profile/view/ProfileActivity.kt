@@ -29,7 +29,6 @@ class ProfileActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if (item.itemId == android.R.id.home) {
@@ -38,5 +37,4 @@ class ProfileActivity : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-
 }
