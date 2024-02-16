@@ -12,7 +12,12 @@ Plantery will remind you to maintain and help you adjust your hydroponic conditi
 - Fragment
 
 <div aling="light">
-<img aling="right" alt="Splash Screen" src="./tp_1.png" width="280px"/> 
+  <img aling="right" alt="Splash Screen" src="./Screenshot_SplashScreen.png" width="280px"/>
+  <img aling="right" alt="Login Screen" src="./Screenshot_Login.png" width="280px"/>
+  <img aling="right" alt="Email Screen" src="./Screenshot_NewUser_Email.png" width="280px"/>
+  <img aling="right" alt="Password Screen" src="./Screenshot_Password.png" width="280px"/>
+  <img aling="right" alt="Welcome Screen" src="./Screenshot_Welcome.png" width="280px"/>
+  <img aling="right" alt="Photo Screen" src="./Screenshot_UploadPhoto.png" width="280px"/> 
 </div>
 
 ## 📜 License
