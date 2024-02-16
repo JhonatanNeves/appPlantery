@@ -11,6 +11,10 @@ Plantery will remind you to maintain and help you adjust your hydroponic conditi
 - ONGOING
 - Fragment
 
+  <p align="light">
+    <img aling="right" alt="Splash Screen" src="./planteryGIF.gif" width="280px" />
+  </p>
+
 <div aling="light">
   <img aling="right" alt="Splash Screen" src="./Screenshot_SplashScreen.png" width="280px"/>
   <img aling="right" alt="Login Screen" src="./Screenshot_Login.png" width="280px"/>
