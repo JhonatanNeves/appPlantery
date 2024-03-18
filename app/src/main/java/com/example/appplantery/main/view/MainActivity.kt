@@ -32,7 +32,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         window.insetsController?.setSystemBarsAppearance(
             WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
             WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS)
