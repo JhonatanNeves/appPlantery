@@ -14,6 +14,7 @@ import com.example.appplantery.common.extension.animationEnd
 import com.example.appplantery.databinding.ActivitySplashBinding
 import com.example.appplantery.home.view.HomeActivity
 import com.example.appplantery.login.view.LoginActivity
+import com.example.appplantery.main.view.MainActivity
 import com.example.appplantery.splash.Splash
 import com.example.appplantery.splash.presentation.SplashPresenter
 
@@ -48,7 +49,7 @@ class SplashActivity : AppCompatActivity(), Splash.View {
     override fun goToHomeScreen() {
         binding.splashProgressBar.animate().apply {
             setListener(animationEnd {
-                val intent = Intent(baseContext, HomeActivity::class.java)
+                val intent = Intent(baseContext, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
