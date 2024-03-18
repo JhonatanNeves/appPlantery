@@ -48,7 +48,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
         binding.mainBottomNav.selectedItemId = R.id.menu_bottom_home
 
     }
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.menu_bottom_home -> {
