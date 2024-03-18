@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import com.example.appplantery.R
+import com.example.appplantery.common.extension.replaceFragment
 import com.example.appplantery.common.view.CropperImageFragment
 import com.example.appplantery.common.view.CropperImageFragment.Companion.KEY_URI
 import com.example.appplantery.databinding.ActivityRegisterBinding
@@ -21,6 +22,7 @@ import com.example.appplantery.home.view.HomeActivity
 import com.example.appplantery.main.view.MainActivity
 import com.example.appplantery.register.view.RegisterNamePasswordFragment.Companion.KEY_EMAIL
 import com.example.appplantery.register.view.RegisterWelcomeFragment.Companion.KEY_NAME
+import com.google.android.material.internal.ViewUtils.hideKeyboard
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -119,18 +121,7 @@ class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
     }
 
     private fun replaceFragment(fragment: Fragment) {
-        if (supportFragmentManager.findFragmentById(R.id.register_fragment) == null) {
-            supportFragmentManager.beginTransaction().apply {
-                add(R.id.register_fragment, fragment)
-                commit()
-            }
-        } else {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.register_fragment, fragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
+        replaceFragment(R.id.register_fragment , fragment)
     }
 
     private fun openImageCropper(uri: Uri){

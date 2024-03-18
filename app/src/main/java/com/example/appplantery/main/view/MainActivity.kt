@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.appplantery.R
+import com.example.appplantery.common.extension.replaceFragment
 import com.example.appplantery.databinding.ActivityMainBinding
 import com.example.appplantery.home.view.HomeFragment
 import com.example.appplantery.profile.view.ProfileFragment
@@ -60,18 +61,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
         }
 
         currentFragment?.let {
-            if (supportFragmentManager.findFragmentById(R.id.main_fragment) == null) {
-                supportFragmentManager.beginTransaction().apply {
-                    add(R.id.main_fragment, it)
-                    commit()
-                }
-            } else {
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.main_fragment, it)
-                    addToBackStack(null)
-                    commit()
-                }
-            }
+            replaceFragment(R.id.main_fragment, it)
         }
         return true
     }
