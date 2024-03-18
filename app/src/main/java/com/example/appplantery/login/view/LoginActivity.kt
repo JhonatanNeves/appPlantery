@@ -15,6 +15,7 @@ import com.example.appplantery.databinding.ActivityLoginBinding
 import com.example.appplantery.home.view.HomeActivity
 import com.example.appplantery.login.Login
 import com.example.appplantery.login.presentation.LoginPresenter
+import com.example.appplantery.main.view.MainActivity
 import com.example.appplantery.register.view.RegisterActivity
 
 class LoginActivity : AppCompatActivity(), Login.View {
@@ -88,7 +89,7 @@ class LoginActivity : AppCompatActivity(), Login.View {
     }
 
     override fun onUserAuthenticated() {
-        val intent = Intent(this, HomeActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
     }
