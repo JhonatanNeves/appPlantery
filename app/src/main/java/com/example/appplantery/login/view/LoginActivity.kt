@@ -4,26 +4,17 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.text.Editable
-import android.text.TextWatcher
-import android.view.View
 import android.view.WindowInsetsController
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.example.appplantery.R
 import com.example.appplantery.common.base.DependencyInjector
 import com.example.appplantery.common.util.TxtWatcher
 import com.example.appplantery.databinding.ActivityLoginBinding
 import com.example.appplantery.home.view.HomeActivity
 import com.example.appplantery.login.Login
-import com.example.appplantery.login.data.FakeDataSource
-import com.example.appplantery.login.data.LoginRepository
 import com.example.appplantery.login.presentation.LoginPresenter
-import com.example.appplantery.profile.view.ProfileActivity
 import com.example.appplantery.register.view.RegisterActivity
 
 class LoginActivity : AppCompatActivity(), Login.View {
