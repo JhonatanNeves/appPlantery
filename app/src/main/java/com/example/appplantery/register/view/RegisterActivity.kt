@@ -121,7 +121,18 @@ class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
     }
 
     private fun replaceFragment(fragment: Fragment) {
-        replaceFragment(R.id.register_fragment , fragment)
+        if (supportFragmentManager.findFragmentById(R.id.register_fragment) == null) {
+            supportFragmentManager.beginTransaction().apply {
+                add(R.id.register_fragment, fragment)
+                commit()
+            }
+        } else {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.register_fragment, fragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
     }
 
     private fun openImageCropper(uri: Uri){

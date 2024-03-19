@@ -1,18 +1,13 @@
 package com.example.appplantery.splash.view
 
-import android.animation.Animator
-import android.animation.Animator.AnimatorListener
-import android.animation.AnimatorListenerAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import androidx.core.content.ContextCompat
 import com.example.appplantery.R
 import com.example.appplantery.common.base.DependencyInjector
 import com.example.appplantery.common.extension.animationEnd
 import com.example.appplantery.databinding.ActivitySplashBinding
-import com.example.appplantery.home.view.HomeActivity
 import com.example.appplantery.login.view.LoginActivity
 import com.example.appplantery.main.view.MainActivity
 import com.example.appplantery.splash.Splash
