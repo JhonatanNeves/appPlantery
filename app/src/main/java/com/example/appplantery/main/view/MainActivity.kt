@@ -41,9 +41,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.menu_bottom_home -> {
+                if (currentFragment == homeFragment) return false
                 currentFragment = homeFragment
             }
             R.id.menu_bottom_profile -> {
+                if (currentFragment == profileFragment) return false
                 currentFragment = profileFragment
             }
         }
