@@ -16,12 +16,6 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        window.insetsController?.setSystemBarsAppearance(
-            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
-            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS)
-
-        window.statusBarColor = ContextCompat.getColor(this, R.color.orange_dull)
-
         val toolbar: Toolbar = findViewById(R.id.activity_toolbar)
         setSupportActionBar(toolbar)
 
