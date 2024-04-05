@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.view.WindowInsetsController
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import com.example.appplantery.R
 import com.example.appplantery.databinding.ActivityMainBinding
@@ -25,10 +26,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.insetsController?.setSystemBarsAppearance(
-            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
-            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS)
-        window.statusBarColor = ContextCompat.getColor(this, R.color.beige_light)
+        
+        WindowCompat.setDecorFitsSystemWindows(
+            window, false
+        )
+
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         homeFragment = HomeFragment()
