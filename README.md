@@ -7,30 +7,12 @@ Plantery will remind you to maintain and help you adjust your hydroponic conditi
 - Supplies requirements (variables which affect the plants growth)
 - and more
 
-## TECHNOLOGIES USED
-- ONGOING
-- MVP
-- dependency
-- database
-- dataSource
-- fragment
-- fragmentManager
-- splashScreen
-- imageCropper
-- circleImageView
-- lib
-- camera
-- provider
-- hardware
-- recyclerView
-- adapter
-- userAuth
-- formValidation
-- scrollView
-- photo
-- upload
-- bottomNavigationView
-- genericsFragment
+## Features
+The whole functionality is implemented inside the domain folder, where the repository accesses remote and local data from the data folder and provides it to the viewmodel using the Use Case (Clean Architecture).
+- Use of open source api.
+- Usage of android Data binding.
+- MVP Architecture
+
 
   <p align="light">
     <img aling="right" alt="Splash Screen" src="./planteryGIF.gif" width="280px" />
