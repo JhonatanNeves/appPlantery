@@ -12,7 +12,6 @@ import com.example.appplantery.R
 import com.example.appplantery.common.base.DependencyInjector
 import com.example.appplantery.common.util.TxtWatcher
 import com.example.appplantery.databinding.ActivityLoginBinding
-import com.example.appplantery.home.view.HomeActivity
 import com.example.appplantery.login.Login
 import com.example.appplantery.login.presentation.LoginPresenter
 import com.example.appplantery.main.view.MainActivity
