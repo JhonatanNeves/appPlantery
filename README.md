@@ -9,7 +9,28 @@ Plantery will remind you to maintain and help you adjust your hydroponic conditi
 
 ## TECHNOLOGIES USED
 - ONGOING
-- Fragment
+- MVP
+- dependency
+- database
+- dataSource
+- fragment
+- fragmentManager
+- splashScreen
+- imageCropper
+- circleImageView
+- lib
+- camera
+- provider
+- hardware
+- recyclerView
+- adapter
+- userAuth
+- formValidation
+- scrollView
+- photo
+- upload
+- bottomNavigationView
+- genericsFragment
 
   <p align="light">
     <img aling="right" alt="Splash Screen" src="./planteryGIF.gif" width="280px" />
