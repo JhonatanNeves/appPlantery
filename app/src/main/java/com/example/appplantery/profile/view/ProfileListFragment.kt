@@ -44,7 +44,7 @@ class ProfileListFragment : Fragment () {
 
         private class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             fun bind(image: Int) {
-                itemView.findViewById<ImageView>(R.id.imageProfile).setImageResource(image)
+                itemView.findViewById<ImageView>(R.id.imageItemBotton).setImageResource(image)
             }
         }
 
