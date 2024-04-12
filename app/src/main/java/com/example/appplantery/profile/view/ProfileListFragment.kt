@@ -19,35 +19,4 @@ class ProfileListFragment : Fragment () {
         return inflater.inflate(R.layout.fragment_profile_list, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val rv = view.findViewById<RecyclerView>(R.id.profile_rv)
-        rv.layoutManager = LinearLayoutManager(context)
-        rv.adapter = PostAdapter()
-    }
-
-    private class PostAdapter : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-            return PostViewHolder(
-                LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_itens_menu, parent, false)
-            )
-        }
-
-        override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-            holder.bind(R.drawable.ic_insta_profile)
-        }
-
-        override fun getItemCount(): Int {
-            return 4
-        }
-
-        private class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            fun bind(image: Int) {
-                itemView.findViewById<ImageView>(R.id.imageItemBotton).setImageResource(image)
-            }
-        }
-
-    }
-
 }
