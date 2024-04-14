@@ -15,4 +15,22 @@ class ProfileFragment : Fragment(){
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_notification, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_notification -> {
+                true
+            } else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }
