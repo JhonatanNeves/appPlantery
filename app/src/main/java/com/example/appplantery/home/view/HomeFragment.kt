@@ -14,6 +14,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.window?.statusBarColor = ContextCompat.getColor(requireContext(), R.color.beige_light)
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 }

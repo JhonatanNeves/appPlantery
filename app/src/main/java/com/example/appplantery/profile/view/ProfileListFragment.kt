@@ -18,33 +18,70 @@ class ProfileListFragment : Fragment () {
     ): View? {
         return inflater.inflate(R.layout.fragment_profile_list, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val mainItems = mutableListOf<ListItem>()
+        mainItems.add(
+            ListItem(
+                id = 1,
+                drawableId = R.drawable.ic_insta_profile,
+                textStringId = R.string.account,
+                endBottonId = R.drawable.ic_next
+            )
+        )
+        mainItems.add(
+            ListItem(
+                id = 2,
+                drawableId = R.drawable.ic_notification,
+                textStringId = R.string.notification,
+                endBottonId = R.drawable.ic_next
+            )
+        )
+        mainItems.add(
+            ListItem(
+                id = 2,
+                drawableId = R.drawable.settings36,
+                textStringId = R.string.settings,
+                endBottonId = R.drawable.ic_next
+            )
+        )
+        mainItems.add(
+            ListItem(
+                id = 2,
+                drawableId = R.drawable.question32,
+                textStringId = R.string.help,
+                endBottonId = R.drawable.ic_next
+            )
+        )
+
         val rv = view.findViewById<RecyclerView>(R.id.profile_list_rv)
         rv.layoutManager = LinearLayoutManager(context)
-        rv.adapter = PostAdapter()
+        rv.adapter = ListAdapter(mainItems)
+
     }
 
-    private class PostAdapter : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
+    private inner class ListAdapter(private val mainItems: List<ListItem>) : RecyclerView.Adapter<ListAdapter.ListProfileViewHolder>() {
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-            return PostViewHolder(
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListProfileViewHolder {
+            return ListProfileViewHolder(
                 LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_itens_menu, parent, false)
             )
         }
 
-        override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-            holder.bind(R.drawable.ic_insta_profile)
+        override fun onBindViewHolder(holder: ListProfileViewHolder, position: Int) {
+            val itemCurrent = mainItems[position]
+            holder.bind(itemCurrent)
         }
 
         override fun getItemCount(): Int {
-            return 4
+            return mainItems.size
         }
 
-        private class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            fun bind(image: Int) {
-                itemView.findViewById<ImageView>(R.id.imageItemBotton).setImageResource(image)
+        private inner class ListProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+            fun bind(item: ListItem) {
+                val imgbuttonList: ImageView = itemView.findViewById(R.id.imageItemBotton)
+                imgbuttonList.setImageResource(item.drawableId)
             }
         }
 
