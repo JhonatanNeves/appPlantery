@@ -31,10 +31,7 @@ class LoginActivity : AppCompatActivity(), Login.View {
 
         presenter = LoginPresenter(this, DependencyInjector.loginRepository())
 
-        window.insetsController?.setSystemBarsAppearance(
-            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
-            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
-        )
+
         window.statusBarColor = ContextCompat.getColor(this, R.color.beige_light)
 
         with(binding) {
