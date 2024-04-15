@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,7 +41,7 @@ class ProfileListFragment : Fragment () {
         )
         mainItems.add(
             ListItem(
-                id = 2,
+                id = 3,
                 drawableId = R.drawable.settings36,
                 textStringId = R.string.settings,
                 endBottonId = R.drawable.ic_next
@@ -48,7 +49,7 @@ class ProfileListFragment : Fragment () {
         )
         mainItems.add(
             ListItem(
-                id = 2,
+                id = 4,
                 drawableId = R.drawable.question32,
                 textStringId = R.string.help,
                 endBottonId = R.drawable.ic_next
@@ -82,6 +83,8 @@ class ProfileListFragment : Fragment () {
             fun bind(item: ListItem) {
                 val imgbuttonList: ImageView = itemView.findViewById(R.id.imageItemBotton)
                 imgbuttonList.setImageResource(item.drawableId)
+                val stringbuttonList: TextView = itemView.findViewById(R.id.textViewBotton)
+                stringbuttonList.setText(item.textStringId)
             }
         }
 
