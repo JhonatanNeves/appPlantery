@@ -15,7 +15,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:overScrollMode="never"
         tools:listitem="@layout/recycler_view_itens_menu"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- overScrollMod disabled scroll of recyclerView -->
