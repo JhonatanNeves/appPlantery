@@ -54,4 +54,6 @@
     <string name="settings">Settings</string>
     <string name="help"><![CDATA[Help & Supports]]></string>
     <string name="invalid_name">The name must have at least 3 characters</string>
+    <string name="rank">Rank</string>
+    <string name="friends">Friends</string>
 </resources>
