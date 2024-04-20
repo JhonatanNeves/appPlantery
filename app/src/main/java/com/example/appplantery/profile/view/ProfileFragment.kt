@@ -2,42 +2,25 @@ package com.example.appplantery.profile.view
 
 import android.os.Bundle
 import android.view.*
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.example.appplantery.R
+import com.example.appplantery.common.base.BaseFragment
+import com.example.appplantery.databinding.FragmentProfileBinding
 
-class ProfileFragment : Fragment(){
+class ProfileFragment: BaseFragment<FragmentProfileBinding, Profile.Presenter>(
+    R.layout.fragment_profile, FragmentProfileBinding::bind){
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+    override lateinit var presenter: Profile.Presenter
+
+
+    override fun setupViews() {
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        activity?.window?.statusBarColor = ContextCompat.getColor(requireContext(), R.color.orange_dull)
-        super.onViewCreated(view, savedInstanceState)
-    }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-
+    override fun setUpPresenter() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_notification, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.menu_notification -> {
-                true
-            } else -> super.onOptionsItemSelected(item)
-        }
+    override fun getMenu(): Int {
+        return R.menu.menu_notification
     }
 
 }

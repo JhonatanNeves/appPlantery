@@ -10,17 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appplantery.R
+import com.example.appplantery.databinding.FragmentProfileListBinding
 
-class ProfileListFragment : Fragment () {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_profile_list, container, false)
-    }
+class ProfileListFragment : Fragment (R.layout.fragment_profile_list) {
+    private var binding: FragmentProfileListBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentProfileListBinding.bind(view)
 
         val mainItems = mutableListOf<ListItem>()
         mainItems.add(
@@ -56,9 +52,8 @@ class ProfileListFragment : Fragment () {
             )
         )
 
-        val rv = view.findViewById<RecyclerView>(R.id.profile_list_rv)
-        rv.layoutManager = LinearLayoutManager(context)
-        rv.adapter = ListAdapter(mainItems)
+        binding?.profileListRv?.layoutManager = LinearLayoutManager(context)
+        binding?.profileListRv?.adapter = ListAdapter(mainItems)
 
     }
 
