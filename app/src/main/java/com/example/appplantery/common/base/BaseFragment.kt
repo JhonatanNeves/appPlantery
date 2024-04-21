@@ -5,13 +5,11 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.widget.FrameLayout
 import androidx.annotation.LayoutRes
 import androidx.annotation.MenuRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.appplantery.R
-import com.example.appplantery.databinding.FragmentProfileBinding
 
 abstract class BaseFragment<T, P: BasePresenter>(
     @LayoutRes layoutId: Int,
@@ -54,7 +52,6 @@ abstract class BaseFragment<T, P: BasePresenter>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         activity?.window?.statusBarColor = ContextCompat.getColor(requireContext(), R.color.orange_dull)
         super.onViewCreated(view, savedInstanceState)
-
         binding = bind(view)
         setupViews()
     }
