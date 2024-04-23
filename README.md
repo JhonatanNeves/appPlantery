@@ -15,12 +15,19 @@ The whole functionality is implemented inside the domain folder, where the repos
 - Usage of android Data binding.
 - MVP Architecture
 
+## User Login
 <div aling="light">
-  <p align="light">
-    <img aling="right" alt="Splash Screen" src="./newUser.gif" width="280px" />
-    <img aling="right" alt="Splash Screen" src="./loginUser.gif" width="280px" />
-  </p>
+<p>
+<img aling="right" alt="Splash Screen" src="./loginUser.gif" width="280px" />
+</p>
 </div>
+
+## User SingUp
+<div aling="light">
+  <p>
+    <img aling="right" alt="Splash Screen" src="./newUser.gif" width="280px" />
+  </p>
+  </div>
 
 
 ## 📜 License
