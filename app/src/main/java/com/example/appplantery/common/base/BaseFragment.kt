@@ -9,7 +9,10 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.MenuRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.appplantery.R
+import com.example.appplantery.profile.view.ListAdapter
+import com.example.appplantery.profile.view.ListItem
 
 abstract class BaseFragment<T, P: BasePresenter>(
     @LayoutRes layoutId: Int,

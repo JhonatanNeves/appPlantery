@@ -6,18 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appplantery.R
+import com.example.appplantery.common.base.BaseFragment
 import com.example.appplantery.databinding.FragmentProfileListBinding
 
-class ProfileListFragment : Fragment (R.layout.fragment_profile_list) {
-    private var binding: FragmentProfileListBinding? = null
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding = FragmentProfileListBinding.bind(view)
+class ProfileListFragment : BaseFragment<FragmentProfileListBinding, Profile.Presenter> (
+    R.layout.fragment_profile_list, FragmentProfileListBinding::bind
+){
+    override lateinit var presenter: Profile.Presenter
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+        super.onViewCreated(view, savedInstanceState)
         val mainItems = mutableListOf<ListItem>()
         mainItems.add(
             ListItem(
@@ -54,7 +55,11 @@ class ProfileListFragment : Fragment (R.layout.fragment_profile_list) {
 
         binding?.profileListRv?.layoutManager = LinearLayoutManager(context)
         binding?.profileListRv?.adapter = ListAdapter(mainItems)
+    }
+    override fun setupViews() {
+    }
 
+    override fun setUpPresenter() {
     }
 
     private inner class ListAdapter(private val mainItems: List<ListItem>) : RecyclerView.Adapter<ListAdapter.ListProfileViewHolder>() {
@@ -84,5 +89,6 @@ class ProfileListFragment : Fragment (R.layout.fragment_profile_list) {
         }
 
     }
+
 
 }
