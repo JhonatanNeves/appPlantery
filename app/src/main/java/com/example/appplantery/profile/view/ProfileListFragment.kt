@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appplantery.R
 import com.example.appplantery.common.base.BaseFragment
 import com.example.appplantery.databinding.FragmentProfileListBinding
+import com.example.appplantery.profile.Profile
 
 class ProfileListFragment : BaseFragment<FragmentProfileListBinding, Profile.Presenter> (
     R.layout.fragment_profile_list, FragmentProfileListBinding::bind
@@ -23,7 +24,7 @@ class ProfileListFragment : BaseFragment<FragmentProfileListBinding, Profile.Pre
         mainItems.add(
             ListItem(
                 id = 1,
-                drawableId = R.drawable.ic_insta_profile,
+                drawableId = R.drawable.usuario96,
                 textStringId = R.string.account,
                 endBottonId = R.drawable.ic_next
             )
@@ -31,7 +32,7 @@ class ProfileListFragment : BaseFragment<FragmentProfileListBinding, Profile.Pre
         mainItems.add(
             ListItem(
                 id = 2,
-                drawableId = R.drawable.ic_notification,
+                drawableId = R.drawable.ic_notification96,
                 textStringId = R.string.notification,
                 endBottonId = R.drawable.ic_next
             )
@@ -39,7 +40,7 @@ class ProfileListFragment : BaseFragment<FragmentProfileListBinding, Profile.Pre
         mainItems.add(
             ListItem(
                 id = 3,
-                drawableId = R.drawable.settings36,
+                drawableId = R.drawable.settings96,
                 textStringId = R.string.settings,
                 endBottonId = R.drawable.ic_next
             )
@@ -47,7 +48,7 @@ class ProfileListFragment : BaseFragment<FragmentProfileListBinding, Profile.Pre
         mainItems.add(
             ListItem(
                 id = 4,
-                drawableId = R.drawable.question32,
+                drawableId = R.drawable.ic_support_help96,
                 textStringId = R.string.help,
                 endBottonId = R.drawable.ic_next
             )
