@@ -2,6 +2,8 @@ package com.example.appplantery.common.base
 
 import com.example.appplantery.login.data.FakeDataSource
 import com.example.appplantery.login.data.LoginRepository
+import com.example.appplantery.profile.data.ProfileFakeRemoteDataSource
+import com.example.appplantery.profile.data.ProfileRepository
 import com.example.appplantery.register.data.FakeRegisterDataSource
 import com.example.appplantery.register.data.RegisterRepository
 import com.example.appplantery.splash.data.FakeLocalDataSource
@@ -19,6 +21,10 @@ object DependencyInjector {
 
     fun registerEmailRepository(): RegisterRepository {
         return RegisterRepository(FakeRegisterDataSource())
+    }
+
+    fun profileRepository() : ProfileRepository{
+        return ProfileRepository(ProfileFakeRemoteDataSource())
     }
 
 }
