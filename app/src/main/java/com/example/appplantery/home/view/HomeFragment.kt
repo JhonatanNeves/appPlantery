@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
                 id = 1,
                 textHeadStringId = R.string.title1,
                 drawableId = R.drawable.vaso_1,
-                textDescStringId = R.string.account
+                textDescStringId = R.string.desc1
             )
         )
         cardItems.add(
@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
                 id = 2,
                 textHeadStringId = R.string.title2,
                 drawableId = R.drawable.vaso_2,
-                textDescStringId = R.string.account
+                textDescStringId = R.string.desc2
             )
         )
         cardItems.add(
@@ -52,7 +52,7 @@ class HomeFragment : Fragment() {
                 id = 3,
                 textHeadStringId = R.string.title3,
                 drawableId = R.drawable.vaso_1,
-                textDescStringId = R.string.account
+                textDescStringId = R.string.desc3
             )
         )
         cardItems.add(
@@ -60,7 +60,7 @@ class HomeFragment : Fragment() {
                 id = 4,
                 textHeadStringId = R.string.title4,
                 drawableId = R.drawable.vaso_2,
-                textDescStringId = R.string.account
+                textDescStringId = R.string.desc4
             )
         )
         cardItems.add(
@@ -68,7 +68,7 @@ class HomeFragment : Fragment() {
                 id = 5,
                 textHeadStringId = R.string.title5,
                 drawableId = R.drawable.vaso_1,
-                textDescStringId = R.string.account
+                textDescStringId = R.string.desc5
             )
         )
 
