@@ -12,9 +12,10 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
     <LinearLayout
         android:layout_width="180dp"
-        android:layout_height="250dp"
+        android:layout_height="220dp"
+        android:elevation="1dp"
         android:orientation="vertical"
-        android:background="@drawable/background_home_cardview">
+        android:background="@drawable/back_card_view_background">
 
         <TextView
             android:id="@+id/textTitleCardView"
@@ -23,28 +24,41 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
             android:text="Coriander"
             android:textSize="25sp"
             android:gravity="center"
-            android:padding="9dp"/>
+            android:padding="11dp"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageCardView"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
+            android:layout_margin="8dp"
             android:src="@drawable/vaso_1"
             app:civ_border_color="@color/gray_light"
             app:civ_border_width="1dp"
             app:civ_circle_background_color="@color/white"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_home_cardview"
+        >
+
         <TextView
             android:id="@+id/textDescView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="220dp"
             android:text="TextView"
             android:textSize="15sp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
             android:gravity="center"
             android:padding="5dp"
             />
     </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>

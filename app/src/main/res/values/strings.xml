@@ -61,4 +61,9 @@
     <string name="title3">Dill</string>
     <string name="title4">Strawberry</string>
     <string name="title5">Lettuce</string>
+    <string name="desc1">Awesome, enjoy your harvest!</string>
+    <string name="desc2">Ew, I fell so dirty :( I should take a bath!</string>
+    <string name="desc3">Are you ready? It\'s havest time!</string>
+    <string name="desc4">Yeay! I feel clean and refreshed!</string>
+    <string name="desc5">It\'s <b>Lettuce</b> harvest time!</string>
 </resources>
