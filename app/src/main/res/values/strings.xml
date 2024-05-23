@@ -56,4 +56,9 @@
     <string name="invalid_name">The name must have at least 3 characters</string>
     <string name="rank">Rank</string>
     <string name="friends">Friends</string>
+    <string name="title1">Coriander</string>
+    <string name="title2">Basil</string>
+    <string name="title3">Dill</string>
+    <string name="title4">Strawberry</string>
+    <string name="title5">Lettuce</string>
 </resources>
