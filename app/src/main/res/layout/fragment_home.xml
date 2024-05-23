@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
         android:orientation="horizontal"
-        android:scrollbars="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_head_home"
