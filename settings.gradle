@@ -1,29 +1,26 @@
+// settings.gradle
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
-        jcenter()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
     repositories {
+        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
         google()
         mavenCentral()
-        jcenter()
     }
-}
-
-
-ext {
-    compileSdkVersion = 28
-    buildToolsVersion = '28.0.3'
-    androidXLibraryVersion = '1.0.0'
-
-    PUBLISH_GROUP_ID = 'com.theartofdev.edmodo'
-    PUBLISH_ARTIFACT_ID = 'android-image-cropper'
-    PUBLISH_VERSION = '2.8.0'
+    versionCatalogs {
+        create("libs") {
+            version("androidApplication", "8.9.1")
+            version("kotlinAndroid", "1.9.0")
+            plugin("android-application", "com.android.application").versionRef("androidApplication")
+            plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlinAndroid")
+        }
+    }
 }
 
 rootProject.name = "appPlantery"
